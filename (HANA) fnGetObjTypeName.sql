@@ -2,8 +2,13 @@ CREATE FUNCTION "fnGetObjTypeName" (ObjTypeCode int)
 RETURNS ObjTypeName VARCHAR(200) LANGUAGE SQLSCRIPT AS
 BEGIN
 
--- Function to return Description Name from ObjTypes
--- Example: SELECT "fnGetObjTypeName"(13) FROM DUMMY;
+/*
+Autor: Marcos M Taira
+Descrição: Função para retornar a descrição baseado nos objTypes
+Data: 01/12/2024
+Uso: Ao utilizar uma Query minha, mesmo que parte dela, deixe os créditos.
+Example: SELECT "fnGetObjTypeName"(13) FROM DUMMY;
+*/
   
 select case
 when :ObjTypeCode=1 then 'G/L Accounts'
